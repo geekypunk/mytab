@@ -677,7 +677,6 @@
 		 	$("#a-btn").html("<span></span><span>Add More!</span><span>Add account</span>");
 
 		 }
-		 
 		 </script>
 				
             

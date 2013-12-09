@@ -1,35 +1,30 @@
 <?php
 
 include 'database/MySQLConnection.php';
+include 'security/PasswordHash.php';
 
+$password = trim($_POST['password']);
+$t_hasher = new PasswordHash(8, FALSE);
+$encrpytPass = $t_hasher->HashPassword(trim($_POST['password']));
 
-$md5pass = md5($_POST['password']);
 $username = $_POST['username'];
 $database = new Database();
-$sql = "SELECT count(*) as user_count,authenticated as authBit from user_data where email= :email and password=:password";
+$sql = "SELECT first_name,authenticated as authBit,password from user_data where email= :email";
 
 
 $database->query($sql);
 $database->bind(':email', $username );
-$database->bind(':password', $md5pass);
+//$database->bind(':password', $encrpytPass);
 $column = $database->single();
-//echo $column['user_count']."\n";
-//echo "authBit ".$column['authBit']."\n";
-if ($column['user_count'] == 1)
+
+if ($t_hasher->CheckPassword($password , $column['password']))
 {
 
-	if ($column['authBit'] == 1)
+	if ($column['authBit'])
 	{
-
 		//User is now logged in
 		session_start();
 		$_SESSION['username'] = $_POST['username'];
-		$sql = "SELECT first_name from user_data where email= :email and password=:password";
-		$database->query($sql);
-		$database->bind(':email', $username );
-		$database->bind(':password', $md5pass);
-		$column = $database->single();
-
 		$_SESSION['firstname'] = $column['first_name'];
 		session_write_close();
 		echo "success";
