@@ -120,10 +120,12 @@ $(document).ready(function() {
 				url: "register.php",
 				type: "POST",
 				data: {
-					email: $("#registeremail").val(),
-					password: $("#registerpassword").val(),
-					firstname: $("#registerfirstname").val(),
-					lastname: $("#registerlastname").val()
+				
+					//Encode user input to prevent Cross-site attack
+					email: encodeURI($("#registeremail").val()),
+					password: encodeURI($("#registerpassword").val()),
+					firstname: encodeURI($("#registerfirstname").val()),
+					lastname: encodeURI($("#registerlastname").val())
 				
 				},
 				dataType: "html"
@@ -171,8 +173,10 @@ $(document).ready(function() {
 			   type: "POST",
 			   url: 'auth.php',
 			   data: {
-					username: $("#username").val(),
-					password: $("#password").val()
+			   
+					//Encode to prevent XSS attack
+					username: encodeURI($("#username").val()),
+					password: encodeURI($("#password").val())
 			   },
 			   success: function(data)
 			   {

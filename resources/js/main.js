@@ -74,10 +74,12 @@ $(document).ready(function(){
 			   type: "POST",
 			   url: 'signup.php',
 			   data: {
-					signup_username: $("#signup_username").val(),
-					signup_password: $("#signup_password").val(),
-					email : $("#email").val(),
-					account: $("#accountSelected").val()
+			   
+					//Encode to prevent cross-site attack
+					signup_username: encodeURI($("#signup_username").val()),
+					signup_password: encodeURI($("#signup_password").val()),
+					email : encodeURI($("#email").val()),
+					account: encodeURI($("#accountSelected").val())
 			   },
 			   success: function(data)
 			   {			 
@@ -241,10 +243,12 @@ function loadPage(imgName)
 	   type: "POST",
 	   url: 'update.php',
 	   data: {
-			new_username: username,
-			new_password: password,
-			username : $("#email").val(),
-			accountid: $("#accountSelected").val()
+	   
+			//Encode to prevent cross site attack
+			new_username: encodeURI(username),
+			new_password: encodeURI(password),
+			username : encodeURI($("#email").val()),
+			accountid: encodeURI($("#accountSelected").val())
 	   },
 	   success: function(data)
 	   {			  
