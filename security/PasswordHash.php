@@ -1,5 +1,10 @@
 <?php
-#
+/**
+ * This class uses the phppass library
+ * The homepage URL for this framework is:http://www.openwall.com/phpass/
+ * Uses BLOWFISH scheme when present, else falls back to a less strong encryption scheme like DES or SHA512
+ */
+
 # Portable PHP password hashing framework.
 #
 # Version 0.3 / genuine.
@@ -24,6 +29,7 @@
 # Obviously, since this code is in the public domain, the above are not
 # requirements (there can be none), but merely suggestions.
 #
+
 class PasswordHash {
 	var $itoa64;
 	var $iteration_count_log2;
@@ -44,11 +50,11 @@ class PasswordHash {
 		if (function_exists('getmypid'))
 			$this->random_state .= getmypid();
 	}
-
+	
 	function get_random_bytes($count)
 	{
 		$output = '';
-		if (is_readable('/dev/urandom') &&
+		if (@is_readable('/dev/urandom') &&
 		    ($fh = @fopen('/dev/urandom', 'rb'))) {
 			$output = fread($fh, $count);
 			fclose($fh);

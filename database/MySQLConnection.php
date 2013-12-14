@@ -1,13 +1,15 @@
 <?php
 
 
-include 'config/config.php.inc';
-include 'DBConnectionInterface.php';
-/*
-Wrapper class on top of PHP PDO class
-Used prepared statements to protect from SQL injections
-The PDO driver automatically handles the security.
-*/
+include_once 'config/config.php.inc';
+include_once 'DBConnectionInterface.php';
+/**
+ * Thus class implements DBConnectionInterface
+ * Wrapper class on top of PHP PDO class
+ * Used prepared statements to protect from SQL injections
+ * The PDO driver automatically handles the security.
+ */
+
 class Database implements DBConnectionInterface{
     private $host      = DB_HOST;
     private $user      = DB_USER;
@@ -18,6 +20,9 @@ class Database implements DBConnectionInterface{
     private $error;
     private $stmt; /* Holds current set prepared statement*/
 
+    /*
+     * Constructor
+     * */
     public function __construct(){
         // Set DSN
         $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname;
@@ -36,10 +41,25 @@ class Database implements DBConnectionInterface{
             $this->error = $e->getMessage();
         }
     }
+
+    /**
+     * Sets the query SQL to the prepared statement object
+     *
+     * @param string $query Query SQL
+     * @return void
+     * */
     public function query($query){
         $this->stmt = $this->dbh->prepare($query);
     }
 
+    /**
+     * Bind the particular parameter to the prepared statement
+     *
+     * @param string $param Parameter name
+     * @param string $value Parameter value
+     * @param string $type Parameter type,Default value is null
+     * @return void
+     * */
     public function bind($param, $value, $type = null){
         if (is_null($type)) {
             switch (true) {
@@ -59,21 +79,38 @@ class Database implements DBConnectionInterface{
         $this->stmt->bindValue($param, $value, $type);
     }
 
+    /**
+     * Execute the prepared statement
+     * @return void
+     * */
     public function execute(){
         return $this->stmt->execute();
     }
 
-    /*For SELECT statements returning multiple rows*/
+    /**
+     * For SELECT statements returning multiple rows
+     *
+     * @return array[] $array Returns all rows in the result set@return void
+    */
     public function resultSet(){
         $this->execute();
         return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-    /*For SELECT statements returning a single row*/
+
+    /**
+     * For SELECT statements returning a single row
+    *
+    * @return array[] $array Returns a single row
+    */
     public function single(){
         $this->execute();
         return $this->stmt->fetch(PDO::FETCH_ASSOC);
     }
 
+    /**
+     * Returns the number of rows in the resultset
+     * @return void
+     * */
     public function rowCount(){
         return $this->stmt->rowCount();
     }

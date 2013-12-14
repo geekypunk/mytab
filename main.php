@@ -9,7 +9,7 @@
 		window.open("index.php","_parent");
 	</script>
 <?php
-	exit ( "" );
+	    exit ( "" );
 	}
 ?>
 <!DOCTYPE html>
@@ -40,7 +40,6 @@
 		
 		<script type="text/javascript" src="resources/js/accounts/constants.js"></script>
 		<script type="text/javascript" src="resources/js/jquery.js"></script>
-		<script type="text/javascript" src="resources/js/jquery-migrate-1.2.1.js"></script>
 		<script type="text/javascript" src="resources/js/lightbox.js"></script>
 		<script type="text/javascript" src="resources/js/utils.js"></script>
 		<script type="text/javascript" src="resources/js/cufon-yui.js"></script>
@@ -55,7 +54,7 @@
 		<script type="text/javascript" src="resources/js/accounts/PiazzaAccountRenderer.js"></script>
 		<script type="text/javascript" src="resources/js/accounts/CCNetAccountRenderer.js"></script>
 		<script type="text/javascript" src="resources/js/accounts/CornellSingleSignOnAccountRenderer.js"></script>
-		<script type="text/javascript" src="resources/js/jquery-ui-1.10.3.custom.js"></script>
+		<script type="text/javascript" src="resources/js/jquery-ui-1.10.3.custom.min.js"></script>
 		<script type="text/javascript" src="resources/js/cufon-yui.js"></script>
 	</head>
 	<body>

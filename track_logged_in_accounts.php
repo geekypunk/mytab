@@ -1,4 +1,8 @@
 <?php
+
+	/**
+ * This function checks the logged in accounts and helps login to them again
+ */
 function IsNullOrEmptyString($question){
     return (!isset($question) || trim($question)==='');
 }

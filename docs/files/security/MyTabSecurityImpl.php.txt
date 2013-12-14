@@ -1,0 +1,44 @@
+<?php
+
+include_once 'MyTabSecurityInterface.php';
+include_once 'PasswordHash.php';
+
+/**
+ *
+ * This class implements MyTabSecurityInterface,contains methods to generate a secure hash using BLOWFISH algorithm
+ * and also to check an already generated hash
+ * Please be aware this class implemetation is a workaround as the PHP version version on the GoDaddy server
+ * does not support password_hash() function, which is recommended
+ * */
+class MyTabSecurityImpl implements MyTabSecurityInterface{
+
+    private $hashFunction;
+
+    /**
+     * Constructor, instantiates the hash function
+     * */
+    public function __construct(){
+        $this->hashFunction = new PasswordHash(8, FALSE);
+    }
+
+    /**
+     * Generate a hash using BLOWFISH algorithm for a given string
+     * @param string $string - input string for which hash has to be generated
+     * @return string generated Hash
+     * */
+    public function generateHash($string)
+    {
+        return $this->hashFunction->HashPassword(trim($string));
+    }
+
+    /**
+     * Check if the generated hash is a valid one
+     * @param string $password Plaintext string to be checked
+     * @param string $stored_hash hash against to be checked
+     * @return integer 0 or 1
+     * */
+    public function checkHash($password, $stored_hash)
+    {
+        return  $this->hashFunction->CheckPassword($password , $stored_hash);
+    }
+}

@@ -4,8 +4,10 @@
 <?php
 	ob_start();
 	session_start();
+	/**
+ * //Redirect to home page if user has already logged in
+ */
 	
-	//Redirect to home page if user has already logged in -->
 	if(isset($_SESSION['username'])) 
 	{
 ?>
@@ -50,7 +52,7 @@
 		<script type="text/javascript" src="resources/js/cufon-yui.js"></script>
 		<script type="text/javascript" src="resources/js/Calibri_400.font.js"></script>
 		<script type="text/javascript" src="resources/js/jquery.validate.min.js"></script>
-		<script type="text/javascript" src="resources/js/jquery-ui-1.10.3.custom.js"></script>
+		<script type="text/javascript" src="resources/js/jquery-ui-1.10.3.custom.min.js"></script>
 		<script type="text/javascript" src="resources/js/index.js"></script>
 	</head>
 	<body>

@@ -2,8 +2,7 @@
 
 /** Load the thumbnails for the accounts that are already set up and add headers for logged in accounts **/
 $(document).ready(function(){
-	Cufon.replace('div#greetings,b,span');
-	
+		
 	//Arrows should be invisible in home page
 	getDocumentOfFrame(parent.leftframe).getElementById('leftArrow').style.visibility = "hidden";
 	getDocumentOfFrame(parent.rightframe).getElementById('rightArrow').style.visibility = "hidden";	
@@ -274,7 +273,7 @@ function addEditImage(div, divName, img, imgName, x_pos, y_pos)
 	//Append edit image to document
 	var editImg = document.createElement("img");
 	editImg.style.position = "absolute";
-	editImg.style.left = x_pos-25+'px';
+	editImg.style.left = x_pos-38+'px';
 	editImg.style.top = y_pos+'px';
 	editImg.style.cursor = 'pointer';
 	editImg.src = "resources/images/document-edit.png";

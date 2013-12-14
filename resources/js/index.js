@@ -171,7 +171,7 @@ $(document).ready(function() {
 		submitHandler: function() {
 			$.ajax({
 			   type: "POST",
-			   url: 'auth.php',
+			   url: 'userAuthentication.php',
 			   data: {
 			   
 					//Encode to prevent XSS attack

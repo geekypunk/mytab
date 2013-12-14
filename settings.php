@@ -13,8 +13,8 @@
 	  <link href="resources/css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
 	  <link href="resources/css/settings.css" rel="stylesheet">
 
-	  <script type="text/javascript" src="resources/js/jquery-1.9.1.js"></script>
-	  <script type="text/javascript" src="resources/js/jquery-ui.js"></script> 
+	  <script type="text/javascript" src="resources/js/jquery.js"></script>
+	  <script type="text/javascript" src="resources/js/jquery-ui-1.10.3.custom.min.js"></script>
 	  <script type="text/javascript" src="resources/js/jquery.validate.min.js"></script>	     
 	  <script type="text/javascript" src="resources/js/settings.js"></script>   
 	  

@@ -1,6 +1,7 @@
 <?php
 /**
- * Interface for Database connections
+ * Interface for Database connections . The client should should implement these to communication to the
+ * appropriate database
  */
 interface DBConnectionInterface
 {

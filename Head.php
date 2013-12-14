@@ -7,7 +7,7 @@
 		<script type="text/javascript" src="resources/js/jquery.js"></script>
 		<script type="text/javascript" src="resources/js/lightbox.js"></script>
 		<link href="resources/css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
-		<script src="resources/js/jquery-ui-1.10.3.custom.js"></script>
+		<script src="resources/js/jquery-ui-1.10.3.custom.min.js"></script>
 		<script type="text/javascript" src="resources/js/AccountsNavigator.js"></script>
 	</head>
 	
