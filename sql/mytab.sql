@@ -29,10 +29,9 @@ USE `mytab`;
 --
 
 CREATE TABLE IF NOT EXISTS `accounts` (
-  `acc_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
+  `acc_id` varchar(50) NOT NULL,
   `name` varchar(50) NOT NULL,
-  `image_link` varchar(50) NOT NULL,
-  `URL` varchar(50) NOT NULL,
   PRIMARY KEY (`acc_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -85,3 +84,13 @@ CREATE TABLE IF NOT EXISTS `user_data` (
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+--
+-- Seed Data for Accounts
+--
+INSERT IGNORE INTO accounts(id, acc_id, name) VALUES(0, 'cms', 'CMS');
+INSERT IGNORE INTO accounts(id, acc_id, name) VALUES(1, 'ccnet', 'CCNet');
+INSERT IGNORE INTO accounts(id, acc_id, name) VALUES(2, 'piazza', 'Piazza');
+INSERT IGNORE INTO accounts(id, acc_id, name) VALUES(3, 'gannett', 'Gannett');
+INSERT IGNORE INTO accounts(id, acc_id, name) VALUES(4, 'studentcenter', 'Student Center');
+INSERT IGNORE INTO accounts(id, acc_id, name) VALUES(5, 'blackboard', 'Blackboard');
+
