@@ -81,9 +81,8 @@ CREATE TABLE IF NOT EXISTS `user_data` (
   PRIMARY KEY (`login_user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- --------------------------------------------------------
+
 --
 -- Seed Data for Accounts
 --
@@ -93,4 +92,9 @@ INSERT IGNORE INTO accounts(id, acc_id, name) VALUES(2, 'piazza', 'Piazza');
 INSERT IGNORE INTO accounts(id, acc_id, name) VALUES(3, 'gannett', 'Gannett');
 INSERT IGNORE INTO accounts(id, acc_id, name) VALUES(4, 'studentcenter', 'Student Center');
 INSERT IGNORE INTO accounts(id, acc_id, name) VALUES(5, 'blackboard', 'Blackboard');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
 
