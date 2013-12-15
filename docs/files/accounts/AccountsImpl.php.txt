@@ -1,15 +1,24 @@
 <?php
+/**
+ * Contains necessary methods for the functioning of the integrated third party accounts and/or university accounts
+*/
 
 include_once 'database/MySQLConnection.php';
 include_once 'config/config.php.inc';
 include_once 'AccountsInterface.php';
+
 /**
- * This class implements AccountsInterface, the necessary methods for the functioning of the integrated third party accounts and/or universoty
+ * This class implements AccountsInterface, the necessary methods for the functioning of the integrated third party accounts and/or university
  * accounts.
  */
 class AccountsImpl implements AccountsInterface
 {
-    private $database;
+    /**
+	* This is the private variable that hold the database object.
+	* @var MySQLConnection object
+	*/
+	private $database;
+	
 	public function __construct()
 	{
 		$this->database = new Database();

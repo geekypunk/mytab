@@ -1,14 +1,11 @@
-<!doctype html>
-<!-- Settings page --> 
 <?php
-	
-	session_start ();
+	session_start();
 ?>
 <html lang="en">
 	<head>
 	  <meta charset="utf-8" />
 	  <title>Account Settings</title>
-	  
+	  <!-- Settings page --> 
 	  <!-- Resources -->
 	  <link href="resources/css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
 	  <link href="resources/css/settings.css" rel="stylesheet">

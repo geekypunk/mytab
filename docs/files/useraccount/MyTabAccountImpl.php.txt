@@ -95,6 +95,20 @@ class MyTabAccountImpl implements MyTabAccountInterface
 		    
 		}
 	}
+	
+	public function getSupportedThirdPartyAccounts(){
+		$sql = "SELECT acc_id,name FROM accounts ORDER BY id";
+		$this->database->query($sql);
+		/**
+		* This is where the query in $sql variable gets executed
+		*/
+		$accounts =  $this->database->resultSet();
+
+		foreach($accounts as $row) {
+			echo $row['acc_id'].','.$row['name'].'|';
+		}
+	
+	}
 
 
 }
