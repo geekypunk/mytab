@@ -1,6 +1,7 @@
-<!-- Mails an random password to user -->
 <?php
-
+/**
+* Mails an random password to user
+*/
 
 include_once 'database/MySQLConnection.php';
 include_once 'database/LoginDBImpl.php';

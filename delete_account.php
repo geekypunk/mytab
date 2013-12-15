@@ -1,6 +1,8 @@
-<!-- Delete 3rd party account added by the user -->
 <?php
- 
+/**
+* Delete 3rd party account added by the user
+*/
+
 include_once 'database/MySQLConnection.php';
 include_once 'accounts/AccountsImpl.php';
 

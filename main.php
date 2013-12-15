@@ -1,6 +1,8 @@
-<!-- Home Page -->
-<!-- Initialize session -->
 <?php
+/**
+* Home Page of MyTab
+* Initialize session 
+*/
 	ob_start ();
 	session_start ();
 	if (! isset ( $_SESSION ['username'] )) {

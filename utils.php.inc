@@ -1,5 +1,7 @@
-<!-- Utility methods -->
 <?php
+/**
+* Contains Utility methods
+*/
 
 /**
  * function to link the generated access token to the url

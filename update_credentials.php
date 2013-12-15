@@ -1,6 +1,7 @@
-<!-- Update  MyTab Credentials -->
 <?php
- 
+/**
+* Update  MyTab Credentials
+*/ 
 
 session_start();
 include_once 'database/MySQLConnection.php';

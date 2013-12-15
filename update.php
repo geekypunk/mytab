@@ -1,5 +1,7 @@
-<!-- Update 3rd party account credentials -->
 <?php
+/**
+* Update 3rd party account credentials
+*/
 
 include_once 'database/MySQLConnection.php';
 include_once 'accounts/AccountsImpl.php';

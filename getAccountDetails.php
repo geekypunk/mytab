@@ -1,5 +1,7 @@
-<!-- Retrieves MyTab account details -->
 <?php
+ /**
+  * Retrieves MyTab account details
+ */
  
 include_once 'database/MySQLConnection.php';
 include_once 'useraccount/MyTabAccountImpl.php';

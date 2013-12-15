@@ -1,5 +1,7 @@
-<!-- Handle login and sign up functionality for 3rd party accounts-->
 <?php
+/**
+* Handle login and sign up functionality for 3rd party accounts-->
+*/
 
 include_once 'database/MySQLConnection.php';
 include_once 'accounts/AccountsImpl.php';

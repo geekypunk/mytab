@@ -1,7 +1,9 @@
-<!-- Login Page -->
-
-<!-- Initialize the session -->
 <?php
+/**
+* <!-- Login Page -->
+
+* <!-- Initialize the session -->
+*/
 	ob_start();
 	session_start();
 	/**

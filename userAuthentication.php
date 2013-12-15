@@ -1,5 +1,7 @@
-<!-- Authenticate user -->
 <?php
+/**
+* <!-- Authenticate user -->
+*/
 
 include_once 'security/PasswordHash.php';
 include_once 'database/LoginDBImpl.php';

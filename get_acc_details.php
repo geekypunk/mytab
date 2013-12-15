@@ -1,6 +1,7 @@
-<!-- Retrieve 3rd party account details -->
 <?php
- 
+ /**
+ * Retrieve 3rd party account details
+ */
 include_once 'database/MySQLConnection.php';
 include_once 'accounts/AccountsImpl.php';
 

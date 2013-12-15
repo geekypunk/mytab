@@ -1,5 +1,7 @@
-<!-- Check whether the login credentials are valid -->
 <?php
+/**
+* Check if user is logged in
+*/
  
 include_once 'database/MySQLConnection.php';
 
