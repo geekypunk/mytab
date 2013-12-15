@@ -1,3 +1,4 @@
+<!-- Retrieve 3rd party account details -->
 <?php
  
 include_once 'database/MySQLConnection.php';

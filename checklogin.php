@@ -1,3 +1,4 @@
+<!-- Check whether the login credentials are valid -->
 <?php
  
 include_once 'database/MySQLConnection.php';

@@ -1,3 +1,4 @@
+<!-- Mails an random password to user -->
 <?php
 
 

@@ -1,3 +1,4 @@
+<!-- Handles registration -->
 <?php
  
 	include_once 'utils.php.inc';

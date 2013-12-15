@@ -1,3 +1,4 @@
+<!-- Retrieves MyTab account details -->
 <?php
  
 include_once 'database/MySQLConnection.php';

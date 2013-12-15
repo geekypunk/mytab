@@ -1,3 +1,4 @@
+<!-- Handle login and sign up functionality for 3rd party accounts-->
 <?php
 
 include_once 'database/MySQLConnection.php';

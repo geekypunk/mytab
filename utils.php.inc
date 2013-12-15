@@ -1,3 +1,4 @@
+<!-- Utility methods -->
 <?php
 
 /**

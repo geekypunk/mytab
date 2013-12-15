@@ -1,3 +1,4 @@
+<!-- Verify the user's email id entered upon registration by generating a mail -->
 <?php
 
 include_once 'database/MySQLConnection.php';

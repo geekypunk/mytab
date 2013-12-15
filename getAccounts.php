@@ -1,3 +1,4 @@
+<!-- Retrieves all 3rd party accounts -->
 <?php
  
 	include_once 'utils.php.inc';

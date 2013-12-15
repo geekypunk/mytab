@@ -1,3 +1,4 @@
+<!-- Authenticate user -->
 <?php
 
 include_once 'security/PasswordHash.php';

@@ -1,3 +1,4 @@
+<!-- Delete 3rd party account added by the user -->
 <?php
  
 include_once 'database/MySQLConnection.php';
