@@ -12,5 +12,6 @@
 	$encrpytPass = $t_hasher->HashPassword(trim($_POST['password']));
 	
 	$dbImpl = new LoginDBImpl();
-	echo $dbImpl->register($email, $firstName, $lastName, $encryptPass);
+	echo $dbImpl->register($email, $firstName, $lastName, $encrpytPass);
 
+?>

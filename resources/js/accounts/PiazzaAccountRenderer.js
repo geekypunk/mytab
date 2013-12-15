@@ -32,7 +32,8 @@ function piazza()
 		login: 'true'
 		},
 	success: function(data)
-	{				
+	{		
+		data = data.trim();
 		arr = data.split("|");
 		$("#email_field").val(arr[0]);
 		$("#password_field").val(arr[1]);

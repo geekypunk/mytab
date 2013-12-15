@@ -19,6 +19,7 @@ $(document).ready(function(){
 			},
 			success: function(data)
 			{
+				data = data.trim();
 				//Accounts set up
 				var accounts = data.split("|")[0].split(",");
 				
@@ -73,7 +74,7 @@ $(document).ready(function(){
 			   type: "POST",
 			   url: 'signup.php',
 			   data: {
-			   
+				
 					//Encode to prevent cross-site attack
 					signup_username: encodeURI($("#signup_username").val()),
 					signup_password: encodeURI($("#signup_password").val()),
@@ -250,7 +251,8 @@ function loadPage(imgName)
 			accountid: encodeURI($("#accountSelected").val())
 	   },
 	   success: function(data)
-	   {			  
+	   {		
+			data = data.trim();
 			parent.document.getElementById($("#accountSelected").val() +'Frame').setAttribute('onload',"");
 			parent.document.getElementById($("#accountSelected").val() + 'Frame').src=urls[$("#accountSelected").val()];
 	   }
@@ -362,6 +364,7 @@ function addDeleteImage(div, divName, img, imgName, x_pos, y_pos)
 		   },
 		   success: function(data)
 		   {
+				data = data.trim();
 				$("#a-btn").html("<span></span><span>Add More!</span><span>Add account</span>");
 				var row = getDocumentOfFrame(parent.frame1).getElementById("header");
 				
@@ -379,6 +382,7 @@ function addDeleteImage(div, divName, img, imgName, x_pos, y_pos)
 				//Remove from the header, if the account was logged in
 				getDocumentOfFrame(parent.frame1).getElementById('activeAccounts').value = addedAccounts.join(',');				
 				removeHeader(selectedAccId);
+				alert("Account "+selectedAccId+" has been deleted!");
 		   }
 	   });
 	});

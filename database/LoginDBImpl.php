@@ -17,11 +17,12 @@ class LoginDBImpl implements LoginDBInterface{
     */
 
     private $database;
+	private $currentTime;
 	public function __construct()
 	{
 	
 		$this->database = new Database();
-		
+		$this->currentTime = time();
 	}
 	
 	/**
@@ -46,7 +47,7 @@ class LoginDBImpl implements LoginDBInterface{
 		}
 		else{
 		
-	    $sql="INSERT INTO user_data VALUES ( :email , :email2 , :firstname , :lastname , :encryptPass ,0,time(),time()) ";
+	    $sql="INSERT INTO user_data VALUES ( :email , :email2 , :firstname , :lastname , :encryptPass ,0,$this->currentTime,$this->currentTime) ";
             $this->database->query($sql);
             $this->database->bind(':email',$email);
             $this->database->bind(':email2',$email);
@@ -129,13 +130,16 @@ class LoginDBImpl implements LoginDBInterface{
         $this->database->bind(':email', $username );
 		//$database->bind(':password', $encryptPass);
 		$column = $this->database->single();
-
+		//echo print_r($column);
+		//echo "adssdsdsd ".$t_hasher->CheckPassword($password , $column['password']);
+		//return true;
 		if ($t_hasher->CheckPassword($password , $column['password']))
 		{
 			if ($column['authBit'])
 			{
-				//User is now logged in
+				
 				session_start();
+				
 				$_SESSION['username'] = $_POST['username'];
 				$_SESSION['firstname'] = $column['first_name'];
 				session_write_close();
@@ -239,7 +243,7 @@ class LoginDBImpl implements LoginDBInterface{
 		    $column = $this->database->single();
 			$_SESSION['firstname'] = $column['first_name'];
 			session_write_close();
-			header("Location: frame.html");
+			header("Location: home.html");
 
 		}
 		else{

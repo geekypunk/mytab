@@ -49,6 +49,7 @@ $(document).ready(function() {
 					dataType: "html"
 			}); 
 			request.done(function( data ) {
+				data = data.trim();
 				if (data == 'success') {
 
 					$( "#success-message" ).dialog( "open" );
@@ -119,6 +120,7 @@ $(document).ready(function() {
 					  },
 				   success: function(data)
 				   {
+						data = data.trim();
 						arr = data.split("|");
 						$( "#firstname" ).val( arr[1] );
 						$( "#lastname" ).val( arr[2] );

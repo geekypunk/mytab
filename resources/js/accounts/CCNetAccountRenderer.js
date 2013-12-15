@@ -33,6 +33,7 @@ function ccnet()
 		},
 	success: function(data)
 	{				
+		data = data.trim();
 		arr = data.split("|");
 		$("#username").val(arr[0]);
 		$("#password").val(arr[1]);

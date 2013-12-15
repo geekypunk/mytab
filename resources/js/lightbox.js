@@ -18,6 +18,7 @@ function lightbox(insertContent, ajaxContentUrl){
 			type: 'GET',
 			url: 'getAccounts.php',
 			success:function(data){
+				data = data.trim();
 				var accounts = data.split("|");
 				coordinatesCount = 0;
 				for(i=0; i<accounts.length - 1; i++)

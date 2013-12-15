@@ -63,6 +63,7 @@ $(document).ready(function() {
 				dataType: "html"
 			});
 			request.done(function( data ) {
+				data = data.trim();
 				if (data === 'success') {			
 					$("#dialog-content").text("An email with new password is sent to your mail id.");
 					$( "#message" ).dialog( "open" );
@@ -131,6 +132,8 @@ $(document).ready(function() {
 				dataType: "html"
 			});
 			request.done(function( data ) {
+			
+			data = data.trim();
 				if (data === 'success') {
 				$("#dialog-content").text("Almost done! Check your email for email verification link.");
 				$( "#message" ).dialog( "open" );
@@ -143,7 +146,7 @@ $(document).ready(function() {
 					$( "#message" ).dialog('option', 'title', 'Registerion Error' );
 				  }
 				  else{
-				  alert("In else case - php code error");
+				  alert(data);
 				  }
 			});
 			request.fail(function( jqXHR, textStatus ) {
@@ -180,6 +183,7 @@ $(document).ready(function() {
 			   },
 			   success: function(data)
 			   {
+			   	  data = data.trim(); 
 				  if(debugFlag)
 						alert(data);
 				  if (data === 'success') {
@@ -272,6 +276,7 @@ $(document).ready(function() {
 		   .html('<iframe style="border: 0px; " src="cookieUse.html" width="100%" height="100%"></iframe>')
 		   .dialog({
 			   autoOpen: false,
+
 			   modal: true,
 			   height: 625,
 			   width: 500,

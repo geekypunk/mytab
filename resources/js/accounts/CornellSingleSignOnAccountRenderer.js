@@ -31,7 +31,8 @@ function cornellsso(accountName)
 		login: 'true'
 		},
 	success: function(data)
-	{				
+	{	
+		data = data.trim();
 		arr = data.split("|");
 		$("#netid").val(arr[0]);
 		$("#password").val(arr[1]);
