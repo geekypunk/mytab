@@ -52,7 +52,7 @@ $(document).ready(function() {
 		},
 		submitHandler: function() {
 			var request = $.ajax({
-				url: "forgot.php",
+				url: "forgotPassword.php",
 				type: "POST",
 				data: {
 					firstname: $("#firstname").val(),
