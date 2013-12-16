@@ -31,6 +31,11 @@ Location of Deliverables
 
 9) System administrator guide & developer guide - /Developer_Guide.txt
 
+10) User Manual - /documentDeliverables/Reports/UserManual.pdf
+
+11) Presentations - /documentDeliverables/Presentations
+
+12) Test Cases - /documentDeliverables/Test Cases
 
 
 To add a new 3rd party account in MyTab
