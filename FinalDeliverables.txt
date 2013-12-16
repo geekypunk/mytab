@@ -10,7 +10,7 @@ Please find the locations of final deliverables
 6) Source code - /src
 7) Source code Documentation- /documentDeliverables/codeDocumentation/index.html
 8) License document - /documentDeliverables/license
-9) System administrator guide cum developer guide - /Developer_Guide.txt
+9) System administrator guide & developer guide - /Developer_Guide.txt
 10) A short report summarizing the final presentation - /documentDeliverables/Reports/ShortReport-Final presentation.pdf
 
 Website URL: https://mytab.org
