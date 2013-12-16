@@ -143,7 +143,6 @@
 			<!-- Forgot password form -->
 			<div id="dialog-form" title="Forgot Password ">
 				<div id="content" > </div>
-				<p class="validateTips">All form fields are required.</p>
 				<form name="forgotForm" id="forgotForm">
 					<fieldset>
 						<label for="name">User Name/Email *</label>
