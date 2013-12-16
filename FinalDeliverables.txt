@@ -12,7 +12,8 @@ Please find the locations of final deliverables
 8)  License document - /documentDeliverables/license
 9)  System administrator guide & developer guide - /Developer_Guide.txt
 10) User Manual - /documentDeliverables/Reports/UserManual.pdf
-11) Presentations - /documentDeliverables/Slides
+11) Presentations - /documentDeliverables/Presentations
+12) Test Cases - /documentDeliverables/Test Cases
 
 Website URL: https://mytab.org
 Supported Browsers : Chrome, Mozilla Firefox
