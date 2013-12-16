@@ -9,7 +9,7 @@ Supported Browsers : Chrome, Mozilla Firefox
 
 Supported Devices: Desktop/Laptop computers
 
-Please find the locations of final deliverables
+Location of Deliverables
 ================================================
 
 
