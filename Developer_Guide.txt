@@ -1,3 +1,18 @@
+Website URL
+===========
+
+https://mytab.org
+
+Supported Browsers 
+==================
+
+Chrome, Mozilla Firefox
+
+Supported Devices
+=================
+
+Desktop/Laptop computers
+
 
 To add a new 3rd party account in MyTab
 ==========================================
@@ -38,3 +53,5 @@ Install instructions
 2) Copy the src folder into the document root of your webserver.
 3) Edit the config.php.inc in /src/config folder to reflect your database credentials
 4) Voila!
+
+
