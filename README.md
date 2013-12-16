@@ -1,4 +1,4 @@
-mytab
+MyTab Developer Guide
 =====
 
 Online direct login and password manager, currently serving Cornell University
@@ -16,13 +16,18 @@ To add a new 3rd party account in MyTab
 	ii. Add logoutURL entry
         iii. Add map entry for length of the image
         iv. Add the account name to exceptions, if the account has issues opening in the same tab.
-------------------------------------------------------------------------------------------------------
+        
+        
+
 
 To provide support for different institution
 ==================================================
 1) Create a new database with same set of tables.
+
 2) Populate the accounts table with the supported accounts
+
 3) Repeat the steps to add 3rd party account.
+
 4) Update the defaultAccountRenderer field in resources/js/accounts/constants.js.
 
 
@@ -32,8 +37,11 @@ Recommended Configuration
 Miminimum requirement for a system where MyTab can be installed are(minimum versions have been indicated)
 
 1) PHP >5.3
+
 2) MySQL > 5.3
+
 3) Apache web server > 2.1
+
 
 Please look in /RecommendedConfigurations for httpd.conf setting for Apache webserver and php.ini for php configuration.
 
@@ -41,7 +49,10 @@ Install instructions
 =======================
 
 1) Run mytab.sql in your database server
+
 2) Copy the src folder into the document root of your webserver.
+
 3) Edit the config.php.inc in /src/config folder to reflect your database credentials
+
 4) Voila!
 
