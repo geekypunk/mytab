@@ -1,9 +1,3 @@
-mytab
-=====
-
-Online direct login and password manager, currently serving Cornell University
-
-
 
 To add a new 3rd party account in MyTab
 ==========================================
@@ -44,4 +38,3 @@ Install instructions
 2) Copy the src folder into the document root of your webserver.
 3) Edit the config.php.inc in /src/config folder to reflect your database credentials
 4) Voila!
-
