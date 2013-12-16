@@ -124,22 +124,16 @@ class LoginDBImpl implements LoginDBInterface{
 	public function authorize($username,$password,$t_hasher)
 	{
 		$sql = "SELECT first_name,authenticated as authBit,password from user_data where email= :email";
-
-
         $this->database->query($sql);
         $this->database->bind(':email', $username );
-		//$database->bind(':password', $encryptPass);
 		$column = $this->database->single();
-		//echo print_r($column);
-		//echo "adssdsdsd ".$t_hasher->CheckPassword($password , $column['password']);
-		//return true;
-		if ($t_hasher->CheckPassword($password , $column['password']))
+		$checkPass = $t_hasher->checkHash($password , $column['password']);
+		if ($checkPass == 1)
 		{
 			if ($column['authBit'])
 			{
 				
 				session_start();
-				
 				$_SESSION['username'] = $_POST['username'];
 				$_SESSION['firstname'] = $column['first_name'];
 				session_write_close();
@@ -148,15 +142,14 @@ class LoginDBImpl implements LoginDBInterface{
 		    
 		    else
 		    {
-		    return "verify";
+				return "verify";
 		    }
 
 		}
 
 		else
 		{
-		  header("Location: index.php");
-		  return "invalid";
+		    return "invalid";
 		}
 
 	}
@@ -164,19 +157,15 @@ class LoginDBImpl implements LoginDBInterface{
 	/**
 	* forget-password function for the form	
 	* @param string $email email-id of the user
-	* @param string $firstname first name of the user
-	* @param string $lastname last name of the user
 	* @param string $newPassword new password to be used
 	* @param string $encryptPass encrypted password
 	* @return string
 	* 	
 	*/
-	public function forgotPassword($email,$firstname,$lastname,$newPassword,$encryptPass)
+	public function forgotPassword($email,$newPassword,$encryptPass)
 	{
-		$sql = "SELECT count(*) as user_count from user_data where first_name= :firstname and last_name= :lastname and email= :email ";
+		$sql = "SELECT count(*) as user_count from user_data where email= :email ";
         $this->database->query($sql);
-        $this->database->bind(':firstname', $firstname );
-        $this->database->bind(':lastname', $lastname);
         $this->database->bind(':email', $email );
 		$column = $this->database->single();
 
@@ -209,7 +198,8 @@ class LoginDBImpl implements LoginDBInterface{
 		
 		}
 		else{
-		return "invalid";
+			
+			return "invalid";
 		
 		}
 

@@ -7,7 +7,7 @@ interface LoginDBInterface
 	public function register($email, $firstName, $lastName, $encryptPass);
 	public function verify($email);
 	public function authorize($username,$password,$t_hasher);
-	public function forgotPassword($email,$firstname,$lastname,$newPassword,$encrpytPass);
+	public function forgotPassword($email,$newPassword,$encrpytPass);
 	public function checklogin($username);
 }
 ?>

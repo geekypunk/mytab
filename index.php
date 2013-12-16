@@ -146,12 +146,14 @@
 				<p class="validateTips">All form fields are required.</p>
 				<form name="forgotForm" id="forgotForm">
 					<fieldset>
-						<label for="name">User Name *</label>
+						<label for="name">User Name/Email *</label>
 						<input type="text" name="userid" id="userid" class="text ui-widget-content ui-corner-all" /><br/>
+						<!--
 						<label for="name">First Name *</label>
 						<input type="text" name="firstname" id="firstname" class="text ui-widget-content ui-corner-all" /><br/>
 						<label for="name">Last Name *</label>
 						<input type="text" name="lastname" id="lastname" class="text ui-widget-content ui-corner-all" /><br/>
+						-->
 					</fieldset>
 				</form>
 			</div>

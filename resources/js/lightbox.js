@@ -20,20 +20,21 @@ function lightbox(insertContent, ajaxContentUrl){
 			success:function(data){
 				data = data.trim();
 				var accounts = data.split("|");
-				coordinatesCount = 0;
+				
 				for(i=0; i<accounts.length - 1; i++)
 				{
 					accountId = accounts[i].split(",")[0];
 					accountName = accounts[i].split(",")[1];
-					
+					coords = coordinates[accountId];
+					x = coords.split(",")[0];
+					y = coords.split(",")[1];
 					//Do not add if the account is already setup
-					if(document.getElementById('div' + accountId) == null)	
+					if(accountId !== '' && document.getElementById('div' + accountId) == null)	
 					{
 						insertContent += '<div style="display:inline-block;" id="' + accountId + 'Icon">\
-								<a href="#" onclick="createDiv(' + coordinates[coordinatesCount] + ',' + coordinates[coordinatesCount+1] + ',\'' + accountId + '\',true)">\
+								<a href="#" onclick="createDiv(' + x + ',' + y + ',\'' + accountId + '\',true)">\
 								<img style="padding-left:18px" src="resources/images/' + accountId +  '.jpg"/></a></div>';						
 					}
-					coordinatesCount += 2;
 				}
 				
 				

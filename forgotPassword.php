@@ -5,14 +5,12 @@
 
 include_once 'database/MySQLConnection.php';
 include_once 'database/LoginDBImpl.php';
-require 'security/PasswordHash.php';
+require 'security/MyTabSecurityImpl.php';
 
 $email = $_POST['username'];
-$firstname=strtolower($_POST['firstname']);
-$lastname=strtolower($_POST['lastname']);
 $newPassword = randomPassword();
-$t_hasher = new PasswordHash(8, FALSE);
-$encryptPass = $t_hasher->HashPassword($newPassword);
+$t_hasher = new MyTabSecurityImpl();
+$encryptPass = $t_hasher->generateHash($newPassword);
 
 /**
  * function to generate a random password
@@ -32,5 +30,6 @@ function randomPassword() {
 }
 
 $dbImpl = new LoginDBImpl();
-echo $dbImpl->forgotPassword($email,$firstname,$lastname,$newPassword,$encryptPass);
+echo $dbImpl->forgotPassword($email,$newPassword,$encryptPass);
 
+?>

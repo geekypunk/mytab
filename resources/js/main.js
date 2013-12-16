@@ -20,20 +20,26 @@ $(document).ready(function(){
 			success: function(data)
 			{
 				data = data.trim();
+				
 				//Accounts set up
 				var accounts = data.split("|")[0].split(",");
 				
 				//Logged in accounts for the current session
 				var loggedInAccounts = data.split("|")[1].split(",");
-				coordinatesCount = 0;
+				
 				
 				/*
 				* Add the thumbnails for the accounts. Length of accounts Array is 1 when no accounts have been added yet
 				*/				
 				for(var i=0 ; i < accounts.length ; i++)
 				{	
-					createDiv(coordinates[coordinatesCount],coordinates[coordinatesCount+1],accounts[i], false);
-					coordinatesCount += 2;
+				   if(accounts[i].trim() !== '')
+				   {
+					var coords = coordinates[accounts[i].trim()]; 
+					x = coords.split(",")[0];
+					y = coords.split(",")[1];
+					createDiv(x,y,accounts[i], false);
+				   }					
 				} 						 
 					
 				// Add the logged in accounts of the current session to header navigation bar
@@ -102,7 +108,7 @@ var count;
 function createDiv(x_pos, y_pos,imgName, signIn) {
 
     
-    if(imgName == '')
+    if(imgName === '')
 		return;
 		
 	//Update account selected
@@ -297,7 +303,7 @@ function addEditImage(div, divName, img, imgName, x_pos, y_pos)
 							accountid: selectedAccId,
 						},
 						 success: function(data) {	
-						 
+						 	data = data.trim();
 							if(data !=='NotFound'){
 								var credArray = data.split("|");
 								$("#edit_username").val(credArray[0]),
@@ -335,7 +341,7 @@ function addDeleteImage(div, divName, img, imgName, x_pos, y_pos)
 	//Create close image
 	var closeImg = document.createElement("img");
 	closeImg.style.position = "absolute";
-	closeImg.style.top = y_pos+30+'px';
+	closeImg.style.top = parseInt(y_pos) + 30 +'px';
 	closeImg.style.cursor = 'pointer';
 	closeImg.src = "resources/images/closeBlueIcon.jpg";
 	closeImg.title = imgName;
@@ -343,10 +349,10 @@ function addDeleteImage(div, divName, img, imgName, x_pos, y_pos)
 	
 	//Adjust the width.
 	if(img.naturalWidth === 0){		
-		closeImg.style.left =x_pos+map[imgName] +'px';
+		closeImg.style.left = parseInt(x_pos) + map[imgName] +'px';
 	}
 	else{	
-		closeImg.style.left =x_pos+img.naturalWidth +'px';
+		closeImg.style.left = parseInt(x_pos) +img.naturalWidth +'px';
 	}
 	div.appendChild(closeImg);
 	$(closeImg).hide();

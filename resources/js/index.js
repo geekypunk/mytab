@@ -16,7 +16,7 @@ $(document).ready(function() {
 	allFields = $( [] ).add( name ).add( email ).add( lastname );
 	$( "#dialog-form" ).dialog({
 		autoOpen: false,
-		height: 400,
+		height: 200,
 		width: 450,
 		modal: true,
 		buttons: {
@@ -40,37 +40,39 @@ $(document).ready(function() {
 	/** Forgot password form validation and submission **/
 	$("#forgotForm").validate({
 		rules: {
-			userid:{required: true, email: true    },
-			firstname: { required: true    },
-			lastname: { required: true     },
+			userid:{required: true, email: true    }
+			//firstname: { required: true    },
+			//lastname: { required: true     },
 					   
 		},
 		messages: {
 			userid: { required: "Please enter your username.", email : "Username should be of form me@ex.com." },
-			firstname: "Please enter your firstname.",
-			lastname: "Please enter your lastname."
+			//firstname: "Please enter your firstname.",
+			//lastname: "Please enter your lastname."
 		},
 		submitHandler: function() {
 			var request = $.ajax({
 				url: "forgotPassword.php",
 				type: "POST",
 				data: {
-					firstname: $("#firstname").val(),
-					username: $("#userid").val(),
-					lastname: $("#lastname").val()
+					//firstname: $("#firstname").val(),
+					username: $("#userid").val()
+					//lastname: $("#lastname").val()
 				
 				},
 				dataType: "html"
 			});
 			request.done(function( data ) {
 				data = data.trim();
+				if(debugFlag)
+					alert(data);
 				if (data === 'success') {			
 					$("#dialog-content").text("An email with new password is sent to your mail id.");
 					$( "#message" ).dialog( "open" );
 					$( "#message" ).dialog('option', 'title', 'Reset Password' );
 					$("#dialog-form").closest('.ui-dialog-content').dialog('close');
 				}
-				else if (data == 'invalid'){
+				else if (data === 'invalid'){
 					$("#dialog-content").text("The credentials are not valid. Please try again with valid credentials.");
 					$( "#message" ).dialog( "open" );
 					$( "#message" ).dialog('option', 'title', 'Invalid Credentials' );
@@ -81,7 +83,7 @@ $(document).ready(function() {
 				}
 			});
 			request.fail(function( jqXHR, textStatus ) {
-				alert( "Request failed: " + textStatus );
+				alert( "Request failed: " + textStatus + jqXHR.responseText);
 			});
 		}
 	});
@@ -132,22 +134,23 @@ $(document).ready(function() {
 				dataType: "html"
 			});
 			request.done(function( data ) {
-			
-			data = data.trim();
+				data = data.trim();
+				if(debugFlag)
+					alert(data);
 				if (data === 'success') {
-				$("#dialog-content").text("Almost done! Check your email for email verification link.");
-				$( "#message" ).dialog( "open" );
+					$("#dialog-content").text("Almost done! Check your email for email verification link.");
+					$( "#message" ).dialog( "open" );
 					$( "#message" ).dialog('option', 'title', 'Registered Successfully' );
 					
-				  }
-				  else if(data==='userexists'){
+				}
+				else if(data==='userexists'){
 					$("#dialog-content").text("User already exists!");
 					$( "#message" ).dialog( "open" );
 					$( "#message" ).dialog('option', 'title', 'Registerion Error' );
-				  }
-				  else{
+				}
+				else{
 				  alert(data);
-				  }
+				}
 			});
 			request.fail(function( jqXHR, textStatus ) {
 				alert( "Request failed: " + textStatus );
@@ -183,9 +186,9 @@ $(document).ready(function() {
 			   },
 			   success: function(data)
 			   {
-			   	  data = data.trim(); 
+				  data = data.trim();
 				  if(debugFlag)
-						alert(data);
+					alert(data);  	
 				  if (data === 'success') {
 					window.location.reload();
 				  }
@@ -194,12 +197,13 @@ $(document).ready(function() {
 					$( "#message" ).dialog( "open" );
 					$( "#message" ).dialog('option', 'title', 'Verification' );
 				  }
-				  else if(data === 'invalid'){
+				  else if(data === 'invalid'){					
 					$("#dialog-content").text("The credentials provided are not valid. Please recheck your username and password.");
 					$( "#message" ).dialog( "open" );
 					$( "#message" ).dialog('option', 'title', 'Invalid Credentials' );
 				  }
 			   }
+                        
 			});
 			return false;
 		}

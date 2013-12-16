@@ -1,5 +1,12 @@
 /** Co-ordinates for hexagonal layout **/
-var coordinates=[400,50, 650,50, 300,250, 750,225,400,450, 650,450];
+var coordinates={};
+//coordinates=[400,50, 650,50, 300,250, 750,225,400,450, 650,450];
+coordinates['blackboard'] = '400,450';
+coordinates['ccnet'] = '650,50';
+coordinates['cms'] = '400,50';
+coordinates['piazza'] = '300,250';
+coordinates['studentcenter'] = '650,450';
+coordinates['gannett'] = '750,225';
 
 /** X-Pos for close image. Varies based on the length of the image **/
 var map = {};
@@ -8,9 +15,9 @@ map['ccnet'] = 168;
 map['cms'] = 212;
 map['piazza'] = 218;
 map['studentcenter'] = 206;
-map['ganett'] = 178;
+map['gannett'] = 178;
 
-/** Default Account renderer used, if a specific one is not foun **/
+/** Default Account renderer used, if a specific one is not found **/
 var defaultAccountRenderer = 'cornellsso';
 
 /** Accounts which cannot be opened in the same frame on logging in **/

@@ -49,7 +49,7 @@ class Database implements DBConnectionInterface{
      * @return void
      * */
     public function query($query){
-        $this->stmt = $this->dbh->prepare($query);
+		$this->stmt = $this->dbh->prepare($query);
     }
 
     /**
@@ -105,7 +105,7 @@ class Database implements DBConnectionInterface{
     * @return array[] $array Returns a single row
     */
     public function single(){
-         $this->execute();
+        $this->execute();
 		$result =  $this->stmt->fetch(PDO::FETCH_ASSOC);
 		$this->stmt->closeCursor();
         return $result;
@@ -116,10 +116,11 @@ class Database implements DBConnectionInterface{
      * @return void
      * */
     public function rowCount(){
-        $result = $this->stmt->rowCount();
+		$result = $this->stmt->rowCount();
 		$this->stmt->closeCursor();
         return $result;
     }
+
 
     public function lastInsertId(){
         return $this->dbh->lastInsertId();

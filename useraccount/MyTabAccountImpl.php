@@ -3,7 +3,7 @@
 include_once 'config/config.php.inc';
 include_once 'database/MySQLConnection.php';
 include_once 'MyTabAccountInterface.php';
-require 'security/PasswordHash.php';
+include_once 'security/PasswordHash.php';
 
 /**
  * This class implements MyTabAccountInterface, contains methods to handle account action related to MyTab master account

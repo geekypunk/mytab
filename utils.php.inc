@@ -10,6 +10,6 @@
  * @return string  
  */
 function generateAccessTokenLink($id,$accessToken){
-	$url = "https://www.mytab.org/"."verify.php?login=$id&accessToken=".$accessToken;
+	$url = "https://www.mytab.org/v2/"."verify.php?login=$id&accessToken=".$accessToken;
 	return $url;
 }

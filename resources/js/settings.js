@@ -41,7 +41,7 @@ $(document).ready(function() {
 					url: "update_credentials.php",
 					type: "POST",
 					data: {
-						username: $('#username').val(),
+						username: $('#username').val().trim(),
 						password: $("#password").val(),
 						firstname: $("#firstname").val(),
 						lastname: $("#lastname").val()               		
@@ -51,7 +51,6 @@ $(document).ready(function() {
 			request.done(function( data ) {
 				data = data.trim();
 				if (data == 'success') {
-
 					$( "#success-message" ).dialog( "open" );
 					$("#dialog-form").closest('.ui-dialog-content').dialog('close');
 					$('#user_name').html($('#username').val());
