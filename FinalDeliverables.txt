@@ -8,8 +8,9 @@ Please find the locations of final deliverables
 4) User interface design - /documentDeliverables/Reports/UI Design.pdf
 5) Test plan, test examples, and results - /documentDeliverables/Reports/TestPlan&Results.pdf
 6) Source code - /src
-7) License document - /documentDeliverables/license
-8) System administrator guide cum developer guide - /Developer_Guide.txt
-9) A short report summarizing the final presentation - /documentDeliverables/Reports/ShortReport-Final presentation.pdf
+7) Source code Documentation- /documentDeliverables/codeDocumentation/index.html
+8) License document - /documentDeliverables/license
+9) System administrator guide cum developer guide - /Developer_Guide.txt
+10) A short report summarizing the final presentation - /documentDeliverables/Reports/ShortReport-Final presentation.pdf
 
 Website URL: https://mytab.org

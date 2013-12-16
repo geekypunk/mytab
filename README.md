@@ -22,11 +22,14 @@ Please find the locations of final deliverables
 
 6) Source code - /src
 
-7) License document - /documentDeliverables/license
+7) Source code Documentation - /documentDeliverables/codeDocumentation/index.html
 
-8) System administrator guide cum developer guide - /Developer_Guide.txt
+8) License document - /documentDeliverables/license
 
-9) A short report summarizing the final presentation - /documentDeliverables/Reports/ShortReport-Final presentation.pdf
+9) System administrator guide cum developer guide - /Developer_Guide.txt
+
+10) A short report summarizing the final presentation - /documentDeliverables/Reports/ShortReport-Final presentation.pdf
+
 
 
 To add a new 3rd party account in MyTab
