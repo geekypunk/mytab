@@ -225,3 +225,7 @@ a.form_button {
     background-position: -387px -102px;
 }
 #usage { background-position: -323px -172px; width: 67px; height: 22px;}
+.greetings{
+    color: #4863A0;
+    font-size: 40px;
+}
