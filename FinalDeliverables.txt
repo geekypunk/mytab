@@ -1,4 +1,3 @@
-
 Please find the locations of final deliverables
 ================================================
 
@@ -10,5 +9,6 @@ Please find the locations of final deliverables
 5) Test plan, test examples, and results - /documentDeliverables/TestPlan&Results.pdf
 6) Source code - /src
 7) License document - /documentDeliverables/license
+8) System administrator guide cum developer guide - /Developer_Guide.txt
 
 Website URL: https://mytab.org
