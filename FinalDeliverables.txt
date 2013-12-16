@@ -2,15 +2,17 @@ Please find the locations of final deliverables
 ================================================
 
 
-1) A feasibility study - /documentDeliverables/Reports/FeasibilityStudy.pdf
-2) Requirements analysis and specification - /documentDeliverables/Reports/RequirementAnalysis.pdf
-3) System and program design - /documentDeliverables/Reports/System&ProgramDesign.pdf
-4) User interface design - /documentDeliverables/Reports/UI Design.pdf
-5) Test plan, test examples, and results - /documentDeliverables/Reports/TestPlan&Results.pdf
-6) Source code - /src
-7) Source code Documentation- /documentDeliverables/codeDocumentation/index.html
-8) License document - /documentDeliverables/license
-9) System administrator guide & developer guide - /Developer_Guide.txt
+1)  Feasibility study - /documentDeliverables/Reports/FeasibilityStudy.pdf
+2)  Requirements analysis and specification - /documentDeliverables/Reports/RequirementAnalysis.pdf
+3)  System and program design - /documentDeliverables/Reports/System&ProgramDesign.pdf
+4)  User interface design - /documentDeliverables/Reports/UI Design.pdf
+5)  Test plan, test examples, and results - /documentDeliverables/Reports/TestPlan&Results.pdf
+6)  Source code - /src
+7)  Source code Documentation- /documentDeliverables/codeDocumentation/index.html
+8)  License document - /documentDeliverables/license
+9)  System administrator guide & developer guide - /Developer_Guide.txt
+10) User Manual - /documentDeliverables/Reports/UserManual.pdf
+11) Presentations - /documentDeliverables/Slides
 
 Website URL: https://mytab.org
 Supported Browsers : Chrome, Mozilla Firefox
