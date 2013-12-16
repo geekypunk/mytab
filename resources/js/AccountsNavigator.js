@@ -173,17 +173,6 @@ function addHeader(imgName)
 /** Removes link from navigation header **/
 function removeHeader(imgName)
 {
-	var row = getDocumentOfFrame(parent.frame1).getElementById("header");
-	
-	//Remove from header
-	for(i=0; i< row.cells.length; i++)
-	{
-		if(row.cells[i].id == imgName)
-		{
-			row.deleteCell(i);
-			break;
-		}
-	}
 	
 	//Server request to delete the account from database
 	$.ajax({
@@ -193,9 +182,20 @@ function removeHeader(imgName)
 				account: imgName,
 				delete: true
 			},
-		 success: function(data) {	
+		 success: function(data) {
+		 	var row = getDocumentOfFrame(parent.frame1).getElementById("header");
+	
+			//Remove from header
+			for(i=0; i< row.cells.length; i++)
+			{
+				if(row.cells[i].id == imgName)
+				{
+					row.deleteCell(i);
+					break;
+				}
+			}
 		 }
-	});
+	});	
 }
 
 /** Logout from an individual account **/
