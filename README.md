@@ -4,6 +4,24 @@ MyTab Developer Guide
 Online direct login and password manager, currently serving Cornell University
 
 
+Please find the locations of final deliverables
+================================================
+
+
+1) A feasibility study - /documentDeliverables/FeasibilityStudy.pdf
+
+2) Requirements analysis and specification - /documentDeliverables/RequirementAnalysis.pdf
+
+3) System and program design - /documentDeliverables/System&ProgramDesign.pdf
+
+4) User interface design - /documentDeliverables/UI Design.pdf
+
+5) Test plan, test examples, and results - /documentDeliverables/TestPlan&Results.pdf
+
+6) Source code - /src
+
+7) License document - /documentDeliverables/license
+
 
 To add a new 3rd party account in MyTab
 ==========================================
