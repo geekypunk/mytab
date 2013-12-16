@@ -4,7 +4,9 @@ MyTab Developer Guide
 Online direct login and password manager, currently serving Cornell University
 
 Website URL: https://mytab.org
+
 Supported Browsers : Chrome, Mozilla Firefox
+
 Supported Devices: Desktop/Laptop computers
 
 Please find the locations of final deliverables
