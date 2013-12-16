@@ -10,19 +10,23 @@ Please find the locations of final deliverables
 ================================================
 
 
-1) A feasibility study - /documentDeliverables/FeasibilityStudy.pdf
+1) A feasibility study - /documentDeliverables/Reports/FeasibilityStudy.pdf
 
-2) Requirements analysis and specification - /documentDeliverables/RequirementAnalysis.pdf
+2) Requirements analysis and specification - /documentDeliverables/Reports/RequirementAnalysis.pdf
 
-3) System and program design - /documentDeliverables/System&ProgramDesign.pdf
+3) System and program design - /documentDeliverables/Reports/System&ProgramDesign.pdf
 
-4) User interface design - /documentDeliverables/UI Design.pdf
+4) User interface design - /documentDeliverables/Reports/UI Design.pdf
 
-5) Test plan, test examples, and results - /documentDeliverables/TestPlan&Results.pdf
+5) Test plan, test examples, and results - /documentDeliverables/Reports/TestPlan&Results.pdf
 
 6) Source code - /src
 
 7) License document - /documentDeliverables/license
+
+8) System administrator guide cum developer guide - /Developer_Guide.txt
+
+9) A short report summarizing the final presentation - /documentDeliverables/Reports/ShortReport-Final presentation.pdf
 
 
 To add a new 3rd party account in MyTab
