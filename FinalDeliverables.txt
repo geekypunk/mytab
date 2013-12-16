@@ -14,3 +14,5 @@ Please find the locations of final deliverables
 10) A short report summarizing the final presentation - /documentDeliverables/Reports/ShortReport-Final presentation.pdf
 
 Website URL: https://mytab.org
+Supported Browsers : Chrome, Mozilla Firefox
+Supported Devices: Desktop/Laptop computers
