@@ -16,7 +16,7 @@ $(document).ready(function() {
 	allFields = $( [] ).add( name ).add( email ).add( lastname );
 	$( "#dialog-form" ).dialog({
 		autoOpen: false,
-		height: 200,
+		height: 220,
 		width: 450,
 		modal: true,
 		buttons: {
