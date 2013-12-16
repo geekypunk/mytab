@@ -29,7 +29,7 @@ Please find the locations of final deliverables
 
 8) License document - /documentDeliverables/license
 
-9) System administrator guide cum developer guide - /Developer_Guide.txt
+9) System administrator guide & developer guide - /Developer_Guide.txt
 
 10) A short report summarizing the final presentation - /documentDeliverables/Reports/ShortReport-Final presentation.pdf
 
