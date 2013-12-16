@@ -372,6 +372,8 @@ function addDeleteImage(div, divName, img, imgName, x_pos, y_pos)
 		   {
 				data = data.trim();
 				$("#a-btn").html("<span></span><span>Add More!</span><span>Add account</span>");
+				document.getElementById('a-btn').setAttribute('onclick', 'lightbox()');
+
 				var row = getDocumentOfFrame(parent.frame1).getElementById("header");
 				
 				//Update the activeAccounts field
