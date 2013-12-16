@@ -79,7 +79,7 @@
 					$_SESSION ['loggedinAccounts'] = '';
 				}
 				$name = urldecode($_SESSION['firstname']);
-				echo "<h1 class='greetings'><span></span>Hi $name!</h1>";
+				echo "<span class='greetings'>Hi $name!</span>";
 			?>
 		</div>
 		
