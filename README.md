@@ -31,8 +31,6 @@ Please find the locations of final deliverables
 
 9) System administrator guide & developer guide - /Developer_Guide.txt
 
-10) A short report summarizing the final presentation - /documentDeliverables/Reports/ShortReport-Final presentation.pdf
-
 
 
 To add a new 3rd party account in MyTab
