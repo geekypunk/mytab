@@ -78,7 +78,8 @@
 				if (! isset ( $_SESSION ['loggedinAccounts'] )) {
 					$_SESSION ['loggedinAccounts'] = '';
 				}
-				echo "<h1 class='greetings'><span></span>Hi $_SESSION[firstname]!</h1>";
+				$name = urldecode($_SESSION['firstname']);
+				echo "<h1 class='greetings'><span></span>Hi $name!</h1>";
 			?>
 		</div>
 		
