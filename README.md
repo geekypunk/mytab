@@ -13,7 +13,7 @@ Location of Deliverables
 ================================================
 
 
-1) A feasibility study - /documentDeliverables/Reports/FeasibilityStudy.pdf
+1) Feasibility study - /documentDeliverables/Reports/FeasibilityStudy.pdf
 
 2) Requirements analysis and specification - /documentDeliverables/Reports/RequirementAnalysis.pdf
 
