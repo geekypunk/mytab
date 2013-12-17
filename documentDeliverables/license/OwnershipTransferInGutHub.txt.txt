@@ -1,2 +1,2 @@
 We, the MyTab team, hereby provide full rights of MyTab system to Joseph Jay Malejki,III.
-This action has been reciprocated through an ownership transfer action in GitHub. The project MyTab was previously under my GitHub username, i.e geekypunk. The repository has been now transferred to  Joseph Jay Malejki,III, who is under the GitHub username, jmalejki.
+This action has been reciprocated through an ownership transfer action in GitHub. The project MyTab was previously under the GitHub username 'geekypunk'. The ownership of the repository has been now transferred to  Joseph Jay Malejki,III, who is under the GitHub username, jmalejki.
