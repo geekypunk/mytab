@@ -25,11 +25,11 @@ Location of Deliverables
 
 6) __Source code__ - /src
 
-7) __Source code Documentation__ - /documentDeliverables/codeDocumentation/index.html. This was generated using PHPdoc framework. Please refer http://www.phpdoc.org/
+7) __Source code Documentation__ - /documentDeliverables/codeDocumentation/index.html. This was generated using PHPdoc 	    framework. Please refer http://www.phpdoc.org/
 	
-8) __License documents - /documentDeliverables/license
+8) __License documents__ - /documentDeliverables/license
 
-9) __System administrator guide & developer guide - /Developer_Guide.txt
+9) __System administrator guide & developer guide__ - /Developer_Guide.txt
 
 10) __User Manual__ - /documentDeliverables/Reports/UserManual.pdf
 
