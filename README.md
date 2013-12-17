@@ -13,29 +13,29 @@ Location of Deliverables
 ================================================
 
 
-1) Feasibility study - /documentDeliverables/Reports/FeasibilityStudy.pdf
+1) __Feasibility study__ - /documentDeliverables/Reports/FeasibilityStudy.pdf
 
-2) Requirements analysis and specification - /documentDeliverables/Reports/RequirementAnalysis.pdf
+2) __Requirements analysis and specification__ - /documentDeliverables/Reports/RequirementAnalysis.pdf
 
-3) System and program design - /documentDeliverables/Reports/System&ProgramDesign.pdf
+3) __System and program design__ - /documentDeliverables/Reports/System&ProgramDesign.pdf
 
-4) User interface design - /documentDeliverables/Reports/UI Design.pdf
+4) __User interface design__ - /documentDeliverables/Reports/UI Design.pdf
 
-5) Test plan, test examples, and results - /documentDeliverables/Reports/TestPlan&Results.pdf
+5) __Test plan, test examples, and results__ - /documentDeliverables/Reports/TestPlan&Results.pdf
 
-6) Source code - /src
+6) __Source code__ - /src
 
-7) Source code Documentation - /documentDeliverables/codeDocumentation/index.html
+7) __Source code Documentation__ - /documentDeliverables/codeDocumentation/index.html. This was generated using PHPdoc framework. Please refer http://www.phpdoc.org/
+	
+8) __License documents - /documentDeliverables/license
 
-8) License document - /documentDeliverables/license
+9) __System administrator guide & developer guide - /Developer_Guide.txt
 
-9) System administrator guide & developer guide - /Developer_Guide.txt
+10) __User Manual__ - /documentDeliverables/Reports/UserManual.pdf
 
-10) User Manual - /documentDeliverables/Reports/UserManual.pdf
+11) __Presentations__ - /documentDeliverables/Presentations
 
-11) Presentations - /documentDeliverables/Presentations
-
-12) Test Cases - /documentDeliverables/Test Cases
+12) __Test Cases__ - /documentDeliverables/Test Cases
 
 
 To add a new 3rd party account in MyTab
