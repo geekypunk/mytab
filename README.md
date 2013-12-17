@@ -76,11 +76,11 @@ Recommended Configuration
 
 Miminimum requirement for a system where MyTab can be installed are(minimum versions have been indicated)
 
-1) PHP >5.3
+1) PHP version 5.3 and above. A list of required extension can be found in  /RecommendedConfigurations/php.ini
 
-2) MySQL > 5.3
+2) MySQL  5.3 and above
 
-3) Apache web server > 2.1
+3) Apache web server version 2.1 and above
 
 
 Please look in /RecommendedConfigurations for httpd.conf setting for Apache webserver and php.ini for php configuration.
